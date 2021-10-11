@@ -1,12 +1,14 @@
 from collections import Counter
 
 
-# Count Triplets problem: https://www.hackerrank.com/challenges/count-triplets-1/problem
-#
-# @param arr An array of integers.
-# @param r   The common ratio.
-# @return The number of triplets.
 def count_triplets(arr: list, r: int):
+    """
+    Count Triplets problem: https://www.hackerrank.com/challenges/count-triplets-1/problem
+
+    :param arr: An array of integers.
+    :param r: The common ratio.
+    :return: The number of triplets.
+    """
     a = Counter(arr)
     b = Counter()
     s = 0

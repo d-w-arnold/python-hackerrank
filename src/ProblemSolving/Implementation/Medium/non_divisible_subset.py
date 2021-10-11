@@ -1,9 +1,11 @@
-# Non-Divisible Subset problem: https://www.hackerrank.com/challenges/non-divisible-subset/problem
-#
-# @param k The divisor.
-# @param s An array of integers.
-# @return The length of the longest subset of 's' meeting the criteria.
 def non_divisible_subset(k: int, s: list):
+    """
+    Non-Divisible Subset problem: https://www.hackerrank.com/challenges/non-divisible-subset/problem
+
+    :param k: The divisor.
+    :param s: An array of integers.
+    :return: The length of the longest subset of 's' meeting the criteria.
+    """
     d = {x: [] for x in range(k)}
     for i in range(len(s)):
         d[s[i] % k].append(s[i])

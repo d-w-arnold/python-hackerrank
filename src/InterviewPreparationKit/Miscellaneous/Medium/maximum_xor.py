@@ -1,10 +1,12 @@
-# Maximum Xor problem: https://www.hackerrank.com/challenges/maximum-xor/problem
-#
-# @param arr     An array of integers.
-# @param queries An array of integers to query.
-# @return an array of integers, each representing the maximum xor value for each
-# element queries[j] against all elements of arr.
 def max_xor(arr: list, queries: list):
+    """
+    Maximum Xor problem: https://www.hackerrank.com/challenges/maximum-xor/problem
+
+    :param arr: An array of integers.
+    :param queries: An array of integers to query.
+    :return: An array of integers, each representing the maximum xor value for each
+    element queries[j] against all elements of arr.
+    """
     ans = []
     trie = {}
     k = len(bin(max(arr + queries))) - 2

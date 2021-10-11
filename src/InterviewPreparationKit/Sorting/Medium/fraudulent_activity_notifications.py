@@ -1,10 +1,12 @@
-# Fraudulent Activity Notifications problem:
-# https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem
-#
-# @param expenditure Daily expenditures.
-# @param d           Days for median spending.
-# @return The number of notices sent.
 def activity_notifications(expenditure: list, d: int):
+    """
+    Fraudulent Activity Notifications problem:
+    https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem
+
+    :param expenditure: Daily expenditures.
+    :param d: Days for median spending.
+    :return: The number of notices sent.
+    """
     f = [0] * 201
     count = 0
     for i in expenditure[:d]:
