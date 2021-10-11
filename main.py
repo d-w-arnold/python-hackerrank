@@ -2,6 +2,23 @@ import os
 
 
 def generate_packages(path: str):
+    """
+    Recursively create Python packages (dirs and `__init__.py` files in newly created dirs), from a given path.
+
+    Example usage: `python main.py --path InterviewPreparationKit/Miscellaneous`
+
+    Result: (Will create each if they each do not already exist)
+    src/InterviewPreparationKit/
+    src/InterviewPreparationKit/__init__.py
+    src/InterviewPreparationKit/Miscellaneous/
+    src/InterviewPreparationKit/Miscellaneous/__init__.py
+    tests/InterviewPreparationKit/
+    tests/InterviewPreparationKit/__init__.py
+    tests/InterviewPreparationKit/Miscellaneous/
+    tests/InterviewPreparationKit/Miscellaneous/__init__.py
+
+    :param path: The path to recursively create Python packages for.
+    """
     if path.split("/", maxsplit=1)[0] in ("src", "tests"):
         path = path.split("/", maxsplit=1)[1]
     packages = path.split("/")
