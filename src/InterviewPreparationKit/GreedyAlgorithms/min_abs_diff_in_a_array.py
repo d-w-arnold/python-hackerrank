@@ -5,4 +5,8 @@ def min_abs_diff(arr: list):
     :param arr: An array of integers.
     :return: The minimum absolute difference found.
     """
-    return -2
+    arr.sort()
+    ans = abs(arr[0] - arr[1])
+    for i in range(0, len(arr) - 1):
+        ans = min(ans, abs(arr[i] - arr[i + 1]))
+    return ans
