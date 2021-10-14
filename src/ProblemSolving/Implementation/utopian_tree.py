@@ -5,4 +5,12 @@ def utopian_tree(n: int):
     :param n: The number of growth cycles to simulate.
     :return: The height of the tree after the given number of cycles.
     """
-    return -2
+    if n <= 0:
+        return 1
+    height = 1
+    for i in range(0, n):
+        if i % 2 == 0:
+            height *= 2
+        else:
+            height += 1
+    return height
