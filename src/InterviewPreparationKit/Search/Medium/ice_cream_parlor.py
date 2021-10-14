@@ -5,4 +5,13 @@ def what_flavors(cost: list, money: int):
     :param cost: The prices for each flavor.
     :param money: The amount of money they have to spend.
     """
-    print("NULL")
+    freq_map = {}
+    for i in range(0, len(cost)):
+        c = cost[i]
+        n = money - c
+        if n in freq_map:
+            print(freq_map[n][0], (i + 1))
+        elif c in freq_map:
+            freq_map[c].append(i + 1)
+        else:
+            freq_map[c] = [i + 1]
