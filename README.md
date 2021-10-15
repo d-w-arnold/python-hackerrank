@@ -35,7 +35,8 @@ In `main.py`, see `generate_packages()` function.
 Can be run with `main()` method:
 
 ```shell
-python main.py --path InterviewPreparationKit/Miscellaneous
+python main.py --sep "/" --path InterviewPreparationKit/Miscellaneous
+python main.py --sep "." --path InterviewPreparationKit.Miscellaneous
 ```
 
 Result (Will create each if they each do not already exist):
