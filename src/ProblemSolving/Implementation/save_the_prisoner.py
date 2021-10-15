@@ -1,4 +1,4 @@
-def save_the_prisoner(n: int, m: int, s: int):
+def save_the_prisoner(n: int, m: int, s: int) -> int:
     """
     Save the Prisoner! problem: https://www.hackerrank.com/challenges/save-the-prisoner/problem
 

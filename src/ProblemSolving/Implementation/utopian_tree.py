@@ -1,4 +1,4 @@
-def utopian_tree(n: int):
+def utopian_tree(n: int) -> int:
     """
     Utopian Tree problem: https://www.hackerrank.com/challenges/utopian-tree/problem
 

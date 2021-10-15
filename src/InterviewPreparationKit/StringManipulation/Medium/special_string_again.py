@@ -1,4 +1,4 @@
-def sub_str_count(n: int, s: str):
+def sub_str_count(n: int, s: str) -> int:
     """
     Special String Again problem: https://www.hackerrank.com/challenges/special-palindrome-again/problem
 

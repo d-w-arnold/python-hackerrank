@@ -1,4 +1,4 @@
-def what_flavors(cost: list, money: int):
+def what_flavors(cost: list, money: int) -> None:
     """
     Hash Tables: Ice Cream Parlor problem: https://www.hackerrank.com/challenges/ctci-ice-cream-parlor/problem
 

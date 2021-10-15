@@ -1,4 +1,4 @@
-def kangaroo(x1: int, v1: int, x2: int, v2: int):
+def kangaroo(x1: int, v1: int, x2: int, v2: int) -> str:
     """
     Number Line Jumps problem: https://www.hackerrank.com/challenges/kangaroo/problem
 
@@ -20,7 +20,7 @@ def kangaroo(x1: int, v1: int, x2: int, v2: int):
         return yes if same_location_possible(x2, v2, x1, v1) else no
 
 
-def same_location_possible(lead_start: int, lead_jump: int, tail_start: int, tail_jump: int):
+def same_location_possible(lead_start: int, lead_jump: int, tail_start: int, tail_jump: int) -> bool:
     if lead_jump <= tail_jump:
         lead_pos = lead_start
         tail_pos = tail_start

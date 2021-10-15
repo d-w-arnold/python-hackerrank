@@ -1,4 +1,4 @@
-def plus_minus(arr: list):
+def plus_minus(arr: list) -> None:
     """
     Plus Minus problem: https://www.hackerrank.com/challenges/plus-minus/problem
 

@@ -1,4 +1,4 @@
-def min_abs_diff(arr: list):
+def min_abs_diff(arr: list) -> int:
     """
     Minimum Absolute Difference in an Array problem: https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/problem
 

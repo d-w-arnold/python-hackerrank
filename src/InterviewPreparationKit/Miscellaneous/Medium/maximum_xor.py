@@ -1,4 +1,4 @@
-def max_xor(arr: list, queries: list):
+def max_xor(arr: list, queries: list) -> list:
     """
     Maximum Xor problem: https://www.hackerrank.com/challenges/maximum-xor/problem
 

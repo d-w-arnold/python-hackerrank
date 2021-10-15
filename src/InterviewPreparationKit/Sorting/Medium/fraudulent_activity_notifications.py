@@ -1,4 +1,4 @@
-def activity_notifications(expenditure: list, d: int):
+def activity_notifications(expenditure: list, d: int) -> int:
     """
     Fraudulent Activity Notifications problem:
     https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem
@@ -20,7 +20,7 @@ def activity_notifications(expenditure: list, d: int):
     return count
 
 
-def get_limit(f: list, d: int):
+def get_limit(f: list, d: int) -> int:
     count = 0
     m1, m2 = (d // 2, d // 2 + 1)
     m = []

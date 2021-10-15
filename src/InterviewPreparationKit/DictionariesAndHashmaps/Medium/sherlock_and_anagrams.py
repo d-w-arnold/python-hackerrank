@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def sherlock_and_anagrams(s: str):
+def sherlock_and_anagrams(s: str) -> int:
     """
     Sherlock and Anagrams problem: https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem
 

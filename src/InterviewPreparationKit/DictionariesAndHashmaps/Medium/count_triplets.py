@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def count_triplets(arr: list, r: int):
+def count_triplets(arr: list, r: int) -> int:
     """
     Count Triplets problem: https://www.hackerrank.com/challenges/count-triplets-1/problem
 

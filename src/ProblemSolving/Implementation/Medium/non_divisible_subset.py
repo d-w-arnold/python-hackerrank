@@ -1,4 +1,4 @@
-def non_divisible_subset(k: int, s: list):
+def non_divisible_subset(k: int, s: list) -> int:
     """
     Non-Divisible Subset problem: https://www.hackerrank.com/challenges/non-divisible-subset/problem
 
