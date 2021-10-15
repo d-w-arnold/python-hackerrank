@@ -1,21 +1,7 @@
 from unittest import TestCase
 
-import sys
-from contextlib import contextmanager
-from io import StringIO
-
+from captured_output import captured_output
 from src.InterviewPreparationKit.Search.Medium.ice_cream_parlor import what_flavors
-
-
-@contextmanager
-def captured_output():
-    new_out, new_err = StringIO(), StringIO()
-    old_out, old_err = sys.stdout, sys.stderr
-    try:
-        sys.stdout, sys.stderr = new_out, new_err
-        yield sys.stdout, sys.stderr
-    finally:
-        sys.stdout, sys.stderr = old_out, old_err
 
 
 class Test(TestCase):
