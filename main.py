@@ -1,7 +1,8 @@
 import os
+import sys
 
 
-def generate_packages(path: str):
+def generate_packages(sep: str, path: str):
     """
     Recursively create Python packages (dirs and `__init__.py` files in newly created dirs), from a given path.
 
@@ -17,11 +18,15 @@ def generate_packages(path: str):
     tests/InterviewPreparationKit/Miscellaneous/
     tests/InterviewPreparationKit/Miscellaneous/__init__.py
 
+    :param sep: The separator to break down the path provided.
     :param path: The path to recursively create Python packages for.
     """
-    if path.split("/", maxsplit=1)[0] in ("src", "tests"):
-        path = path.split("/", maxsplit=1)[1]
-    packages = path.split("/")
+    if path.split(sep, maxsplit=1)[0] in ("src", "tests"):
+        path = path.split(sep, maxsplit=1)[1]
+    packages = path.split(sep)
+    if packages[0] == path:
+        print(f'Error: --path {path} does not contain --sep "{sep}"')
+        sys.exit(1)
     generate_packages_helper(packages, os.path.join(os.getcwd(), "src"))
     generate_packages_helper(packages, os.path.join(os.getcwd(), "tests"))
 
@@ -38,14 +43,15 @@ def generate_packages_helper(packages, tmp_path):
             print("New file:\t", tmp_path)
 
 
-def main(path):
-    generate_packages(path)
+def main(sep, path):
+    generate_packages(sep, path)
 
 
 if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='Add a module path to both src and tests modules in repo.')
-    parser.add_argument('--path', metavar='path', required=True, help='The module path to add.')
+    parser.add_argument('--sep', required=True, help='The separator to break down the path provided.')
+    parser.add_argument('--path', required=True, help='The path to recursively create Python packages for.')
     args = parser.parse_args()
-    main(path=args.path)
+    main(sep=args.sep, path=args.path)
