@@ -40,7 +40,7 @@ def generate_packages_helper(packages, tmp_path):
         tmp_path_init = os.path.join(tmp_path, "__init__.py")
         if not os.path.exists(tmp_path_init):
             open(tmp_path_init, "a")
-            print("New file:\t", tmp_path)
+            print("New file:\t", tmp_path_init)
 
 
 def main(sep, path):
