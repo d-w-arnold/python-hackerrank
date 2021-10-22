@@ -7,4 +7,12 @@ def breaking_records(scores: list) -> list:
     :return: An array with the numbers of times she broke her records. Index 0 is for breaking most points records,
     and index 1 is for breaking least points records.
     """
-    return [-2]
+    minimum, maximum, min_total, max_total = scores[0], scores[0], 0, 0
+    for score in scores:
+        if score > maximum:
+            maximum = score
+            max_total += 1
+        if score < minimum:
+            minimum = score
+            min_total += 1
+    return [max_total, min_total]
