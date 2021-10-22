@@ -14,16 +14,14 @@ def solve(arr: list) -> int:
 
 
 def next_greater_in_left(arr: list) -> list:
-    index = [0] * (len(arr) + 1)
-    s = []
+    index, s = [0] * (len(arr) + 1), []
     for i in range(len(arr) - 1, -1, -1):
         build_index(arr, index, s, i)
     return index
 
 
 def next_greater_in_right(arr: list) -> list:
-    index = [0] * (len(arr) + 1)
-    s = []
+    index, s = [0] * (len(arr) + 1), []
     for i in range(0, len(arr)):
         build_index(arr, index, s, i)
     return index

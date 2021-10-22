@@ -9,8 +9,7 @@ def count_triplets(arr: list, r: int) -> int:
     :param r: The common ratio.
     :return: The number of triplets.
     """
-    a = Counter(arr)
-    b = Counter()
+    a, b = Counter(arr), Counter()
     s = 0
     for i in arr:
         j = i // r

@@ -6,11 +6,10 @@ def sub_str_count(n: int, s: str) -> int:
     :param s: A string.
     :return: The number of special substrings.
     """
-    ans = 0
+    ans = count = 0
     lst = []
     cur = None
-    count = 0
-    for i in range(n):
+    for i in range(0, n):
         if s[i] == cur:
             count += 1
         else:

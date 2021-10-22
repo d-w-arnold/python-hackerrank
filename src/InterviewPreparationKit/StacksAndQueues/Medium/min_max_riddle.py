@@ -6,9 +6,7 @@ def riddle(arr: list) -> list:
     :return: An array of integers representing the maximum minimum value for each window size from 1 to 'n'.
     """
     n = len(arr)
-    s = []
-    left = ([-1] * n) + [0]
-    right = ([n] * n) + [0]
+    s, left, right = [], ([-1] * n) + [0], ([n] * n) + [0]
     for i in range(0, n):
         while s and arr[s[-1]] >= arr[i]:
             s.pop()

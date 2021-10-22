@@ -4,9 +4,7 @@ def plus_minus(arr: list) -> None:
 
     :param arr: An array of integers.
     """
-    pos_num = 0
-    neg_num = 0
-    zeros = 0
+    pos_num = neg_num = zeros = 0
     for i in arr:
         if i > 0:
             pos_num += 1

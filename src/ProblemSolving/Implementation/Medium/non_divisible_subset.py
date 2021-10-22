@@ -6,8 +6,8 @@ def non_divisible_subset(k: int, s: list) -> int:
     :param s: An array of integers.
     :return: The length of the longest subset of 's' meeting the criteria.
     """
-    d = {x: [] for x in range(k)}
-    for i in range(len(s)):
+    d = {x: [] for x in range(0, k)}
+    for i in range(0, len(s)):
         d[s[i] % k].append(s[i])
     count = 0
     if len(d[0]) > 0:
