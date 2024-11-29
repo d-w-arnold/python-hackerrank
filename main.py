@@ -47,11 +47,11 @@ def main(sep, path):
     generate_packages(sep, path)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description='Add a module path to both src and tests modules in repo.')
-    parser.add_argument('--sep', required=True, help='The separator to break down the path provided.')
-    parser.add_argument('--path', required=True, help='The path to recursively create Python packages for.')
+    parser = argparse.ArgumentParser(description="Add a module path to both src and tests modules in repo.")
+    parser.add_argument("--sep", required=True, help="The separator to break down the path provided.")
+    parser.add_argument("--path", required=True, help="The path to recursively create Python packages for.")
     args = parser.parse_args()
     main(sep=args.sep, path=args.path)

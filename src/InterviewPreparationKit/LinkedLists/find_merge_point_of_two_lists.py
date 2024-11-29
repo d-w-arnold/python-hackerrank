@@ -2,14 +2,12 @@ from typing import Optional
 
 
 class SinglyLinkedListNode:
-
     def __init__(self, data: int):
         self.data: int = data
         self.next: Optional[SinglyLinkedListNode] = None
 
 
 class SinglyLinkedList:
-
     def __init__(self):
         self.head: Optional[SinglyLinkedListNode] = None
         self.tail: Optional[SinglyLinkedListNode] = None

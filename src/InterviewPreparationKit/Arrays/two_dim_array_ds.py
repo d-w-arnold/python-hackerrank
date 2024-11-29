@@ -18,9 +18,7 @@ def hourglass_sum(arr: list) -> int:
 def get_hour_glass(arr: list, x: int, y: int) -> list:
     if x >= len(arr[0]) or y >= len(arr):
         return []
-    return [[arr[x][y + i] for i in range(0, 3)],
-            [0, arr[x + 1][y + 1], 0],
-            [arr[x + 2][y + i] for i in range(0, 3)]]
+    return [[arr[x][y + i] for i in range(0, 3)], [0, arr[x + 1][y + 1], 0], [arr[x + 2][y + i] for i in range(0, 3)]]
 
 
 def sum_two_dim_array(two_dim_array: list) -> int:

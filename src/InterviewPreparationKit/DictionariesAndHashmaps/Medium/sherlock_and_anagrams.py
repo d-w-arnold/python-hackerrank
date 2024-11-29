@@ -12,7 +12,7 @@ def sherlock_and_anagrams(s: str) -> int:
     count = 0
     for i in range(0, len(s)):
         for j in range(1, len(s) - i + 1):
-            key = frozenset(Counter(s[i:i + j]).items())
+            key = frozenset(Counter(s[i : i + j]).items())
             buckets[key] = buckets.get(key, 0) + 1
     for key in buckets:
         count += buckets[key] * (buckets[key] - 1) // 2
