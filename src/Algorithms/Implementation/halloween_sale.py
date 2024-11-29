@@ -10,9 +10,8 @@ def how_many_games(p: int, d: int, m: int, s: int) -> int:
     """
     budget: int = s
     num_of_games: int = 0
-    game_price: int = p
-    while budget >= game_price:
-        budget -= game_price
+    while budget >= p:
+        budget -= p
         num_of_games += 1
-        game_price = max(m, game_price - d)
+        p = max(m, p - d)
     return num_of_games
